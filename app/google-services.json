@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "528138205405",
+    "project_id": "aqi-test-app",
+    "storage_bucket": "aqi-test-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528138205405:android:5831b61ed67d309c234334",
+        "android_client_info": {
+          "package_name": "com.example.appqualityinsightsqaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528138205405-5bt8gkd3etm3caesam7npqsma3gipr7t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDL9W8A7pEea0ZYBMjwJe-6VaajNCCvyY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528138205405-5bt8gkd3etm3caesam7npqsma3gipr7t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
