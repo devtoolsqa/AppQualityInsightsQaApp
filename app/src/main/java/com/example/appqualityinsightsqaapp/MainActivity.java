@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                throw new RuntimeException("Test Crash");
+                throw new RuntimeException("Test Crash vcs");
             }
         });
     }
@@ -59,9 +59,7 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-
-        throw new RuntimeException("Test Crash new");
+        throw new RuntimeException("Test Crash new modified");
     }
 
     @Override
@@ -69,5 +67,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void performClick(View view) {
+        String s=null;
+        int length=s.length();
     }
 }

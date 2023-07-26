@@ -47,4 +47,8 @@ public class FirstFragment extends Fragment {
         binding = null;
     }
 
+    public void perfromClick(View view) {
+        String s=null;
+        int lenght=s.length();
+    }
 }
