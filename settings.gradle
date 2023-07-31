@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "AppQualityInsightsQaApp"
 include ':app'
 include ':flavorsModule'
+include ':mylibrary'
+include ':lib'

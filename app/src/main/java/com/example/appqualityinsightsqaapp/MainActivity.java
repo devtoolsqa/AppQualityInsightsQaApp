@@ -1,7 +1,11 @@
 package com.example.appqualityinsightsqaapp;
 
+import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibrary;
+
 import android.os.Bundle;
 
+import com.example.lib.JavaLibraryClass;
+import com.example.mylibrary.AndroidLibraryClass;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +21,14 @@ import com.example.appqualityinsightsqaapp.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    Button andLibButton;
+    Button javalibCrash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,21 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 throw new RuntimeException("Test Crash vcs");
+            }
+        });
+        andLibButton=findViewById(R.id.and_lib_crash);
+        javalibCrash=findViewById(R.id.java_lib_crash);
+        andLibButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createCrashInAndroidLibrary();
+            }
+        });
+
+        javalibCrash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                JavaLibraryClass.createCrashInJavaLibrary();
             }
         });
     }
