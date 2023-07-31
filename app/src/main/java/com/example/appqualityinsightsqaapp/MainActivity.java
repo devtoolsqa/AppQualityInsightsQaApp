@@ -5,6 +5,7 @@ import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibr
 import android.os.Bundle;
 
 import com.example.lib.JavaLibraryClass;
+import com.example.lib.TestClass;
 import com.example.mylibrary.AndroidLibraryClass;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         javalibCrash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                JavaLibraryClass.createCrashInJavaLibrary();
+                TestClass.Test();
             }
         });
     }
