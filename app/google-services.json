@@ -1,36 +1,26 @@
 {
   "project_info": {
-    "project_number": "528138205405",
-    "project_id": "aqi-test-app",
-    "storage_bucket": "aqi-test-app.appspot.com"
+    "project_number": "72165087615",
+    "project_id": "appqualityrelease",
+    "storage_bucket": "appqualityrelease.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:528138205405:android:5831b61ed67d309c234334",
+        "mobilesdk_app_id": "1:72165087615:android:a4455dc825801aca45224a",
         "android_client_info": {
           "package_name": "com.quality.appqualityinsightsqaapp"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "528138205405-5bt8gkd3etm3caesam7npqsma3gipr7t.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDL9W8A7pEea0ZYBMjwJe-6VaajNCCvyY4"
+          "current_key": "AIzaSyAPay4DyriUxCwfhrO29CDyNw56uPcs2kk"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "528138205405-5bt8gkd3etm3caesam7npqsma3gipr7t.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
