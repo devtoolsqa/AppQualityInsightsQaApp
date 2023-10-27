@@ -7,17 +7,17 @@ plugins {
 android {
     signingConfigs {
         release {
-            storeFile file('C:\\Signed_apk\\ee_c5.jks')
-            storePassword '123456'
-            keyPassword '123456'
-            keyAlias 'key0'
+//            storeFile file('C:\\Signed_apk\\ee_c5.jks')
+//            storePassword '123456'
+//            keyPassword '123456'
+//            keyAlias 'key0'
         }
     }
     namespace 'com.example.appqualityinsightsqaapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.appqualityinsightsqaapp"
+        applicationId "com.quality.appqualityinsightsqaapp"
         minSdk 24
         targetSdk 33
         versionCode 1
