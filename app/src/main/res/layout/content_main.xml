@@ -19,6 +19,15 @@
         app:navGraph="@navigation/nav_graph" />
 
     <Button
+        android:id="@+id/and_lib_crash2"
+        android:layout_width="364dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="92dp"
+        android:text="Create crash in Android library 2"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        tools:layout_editor_absoluteX="29dp" />
+
+    <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

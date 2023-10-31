@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
     Button andLibButton;
+    Button andLibButton2;
     Button javalibCrash;
 
     @Override
@@ -53,8 +54,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         andLibButton=findViewById(R.id.and_lib_crash);
+        andLibButton2=findViewById(R.id.and_lib_crash2);
         javalibCrash=findViewById(R.id.java_lib_crash);
         andLibButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createCrashInAndroidLibrary();
+            }
+        });
+
+        andLibButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createCrashInAndroidLibrary();
