@@ -10,6 +10,9 @@ public class AndroidLibraryClass {
 
 
 
-        throw new NullPointerException("Android Library crash");
+
+
+
+        throw new RuntimeException("Android Library crash");
     }
 }
