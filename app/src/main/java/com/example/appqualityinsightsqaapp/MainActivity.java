@@ -1,5 +1,6 @@
 package com.example.appqualityinsightsqaapp;
 
+import static com.example.lib.JavaLibraryClass.createCrashInJavaLibrary;
 import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibrary;
 
 import android.os.Bundle;
@@ -73,7 +74,13 @@ public class MainActivity extends AppCompatActivity {
         javalibCrash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TestClass.Test();
+                createCrashInAndroidLibrary();
+            }
+        });
+        javalibCrash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createCrashInJavaLibrary();
             }
         });
     }
