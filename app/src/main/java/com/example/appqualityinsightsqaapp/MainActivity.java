@@ -25,6 +25,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import java.util.IllegalFormatConversionException;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
@@ -51,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                throw new RuntimeException("Test Crash vcs");
+//                throw new RuntimeException("Test Crash vcs");
+                try {
+                    callCrashMethod();
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
             }
         });
         andLibButton=findViewById(R.id.and_lib_crash);
@@ -80,9 +87,19 @@ public class MainActivity extends AppCompatActivity {
         javalibCrash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                try {
+                    callCrashMethod();
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
                 createCrashInJavaLibrary();
             }
         });
+    }
+
+    private void callCrashMethod() throws IllegalAccessException {
+//        throw new IllegalFormatConversionException('-', null);
+        throw new IllegalAccessException("Testing release version");
     }
 
     @Override
