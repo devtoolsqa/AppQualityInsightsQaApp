@@ -33,9 +33,9 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
-            vcsInfo {
+            /*vcsInfo {
                 include true
-            }
+            }*/
         }
     }
     compileOptions {

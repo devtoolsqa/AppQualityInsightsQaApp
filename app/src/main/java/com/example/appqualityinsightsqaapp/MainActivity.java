@@ -54,11 +54,9 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 //                throw new RuntimeException("Test Crash vcs");
-                try {
-                    callCrashMethod();
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                }
+
+                callCrashMethod();
+
             }
         });
         andLibButton=findViewById(R.id.and_lib_crash);
@@ -87,19 +85,15 @@ public class MainActivity extends AppCompatActivity {
         javalibCrash.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try {
-                    callCrashMethod();
-                } catch (IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                }
+                callCrashMethod();
                 createCrashInJavaLibrary();
             }
         });
     }
 
-    private void callCrashMethod() throws IllegalAccessException {
+    private void callCrashMethod() {
 //        throw new IllegalFormatConversionException('-', null);
-        throw new IllegalAccessException("Testing release version");
+        throw new StackOverflowError("Testing release version");
     }
 
     @Override
