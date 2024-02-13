@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<defaults>
+  <entry>
+    <key>welcome_message</key>
+    <value>Welcome to this QA crashlytics app!</value>
+  </entry>
+  <entry>
+    <key>holiday_promo</key>
+    <value>Welcome to QA app designed for holiday season!!!</value>
+  </entry>
+</defaults>
