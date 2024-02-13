@@ -17,11 +17,14 @@ public class AndroidLibraryClass {
                 .putString("device_locale", deviceLocale2)
                 .build();
         FirebaseCrashlytics.getInstance().setCustomKeys(keysAndValues);
-        FirebaseCrashlytics.getInstance().log("Android Library crash");
+        FirebaseCrashlytics.getInstance().log("Latest Android Library crash");
+        FirebaseCrashlytics.getInstance().log("this is a test log message to be recorded in crashlytics");
+
+
         //FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
         //crashlytics.log("Android Library crash");
 
-        //context = context.getApplicationContext();
+        //crashlytics.setCustomKey("library", "android_library2");
         //crashlytics.setCustomKey("device_locale", deviceLocale2);
 
 
