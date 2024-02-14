@@ -20,8 +20,8 @@
 
     <Button
         android:id="@+id/and_lib_crash2"
-        android:layout_width="346dp"
-        android:layout_height="60dp"
+        android:layout_width="358dp"
+        android:layout_height="61dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="92dp"
         android:text="Create crash in Android library 2"
@@ -41,12 +41,13 @@
 
     <Button
         android:id="@+id/and_lib_crash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="328dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginBottom="176dp"
         android:text="Create crash in Android library"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        tools:layout_editor_absoluteX="64dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/java_lib_crash"

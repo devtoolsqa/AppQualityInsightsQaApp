@@ -14,6 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.appqualityinsightsqaapp.databinding.FragmentSecondBinding;
+import com.google.firebase.crashlytics.CustomKeysAndValues;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
+
+import java.util.Locale;
 
 public class SecondFragment extends Fragment {
 
@@ -33,6 +37,18 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        String deviceLocale2 = Locale.getDefault().getDisplayLanguage();
+
+        CustomKeysAndValues keysAndValues = new CustomKeysAndValues.Builder()
+                .putString("fragment", "From_second_fragment")
+                .putString("device_locale", deviceLocale2)
+                .build();
+        FirebaseCrashlytics.getInstance().setCustomKeys(keysAndValues);
+        FirebaseCrashlytics.getInstance().log("User on second fragment");
+        FirebaseCrashlytics.getInstance().log("User can create crash from different buttons");
+        FirebaseCrashlytics.getInstance().log("Sending more logs to Firebase");
+        FirebaseCrashlytics.getInstance().sendUnsentReports();
+
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
             @Override
