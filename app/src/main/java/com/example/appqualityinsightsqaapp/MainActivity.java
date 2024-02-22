@@ -20,10 +20,14 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.appqualityinsightsqaapp.databinding.ActivityMainBinding;
+import com.google.firebase.crashlytics.CustomKeysAndValues;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        String deviceLocale = Locale.getDefault().getDisplayLanguage();
+        String country = Locale.getDefault().getCountry();
+        String deviceName = android.os.Build.MANUFACTURER + "-" + android.os.Build.MODEL+ "-" + android.os.Build.PRODUCT;
+
+        CustomKeysAndValues keysAndValues = new CustomKeysAndValues.Builder()
+                .putString("fragment", "Main Activity")
+                .putString("device_name", deviceName)
+                .putString("device_locale", deviceLocale)
+                .putString("country", country)
+                .build();
+        FirebaseCrashlytics.getInstance().setCustomKeys(keysAndValues);
+        FirebaseCrashlytics.getInstance().log("App launched in: " + country + " with device locale as: " + deviceLocale);
         super.onCreate(savedInstanceState);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());

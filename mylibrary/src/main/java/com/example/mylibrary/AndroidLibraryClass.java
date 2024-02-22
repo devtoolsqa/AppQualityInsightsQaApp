@@ -18,8 +18,9 @@ public class AndroidLibraryClass {
                 .build();
         FirebaseCrashlytics.getInstance().setCustomKeys(keysAndValues);
         FirebaseCrashlytics.getInstance().log("Latest Android Library crash");
-        FirebaseCrashlytics.getInstance().log("this is a test log message to be recorded in crashlytics");
-
+        FirebaseCrashlytics.getInstance().log("This is a test log message to be recorded in crashlytics");
+        FirebaseCrashlytics.getInstance().log("This is a second test log message to be recorded in crashlytics");
+        FirebaseCrashlytics.getInstance().sendUnsentReports();
 
         //FirebaseCrashlytics crashlytics = FirebaseCrashlytics.getInstance();
         //crashlytics.log("Android Library crash");
