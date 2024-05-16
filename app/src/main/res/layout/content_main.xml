@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -20,41 +19,55 @@
 
     <Button
         android:id="@+id/and_lib_crash2"
-        android:layout_width="358dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="92dp"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
         android:text="Create crash in Android library 2"
         app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
         android:onClick="performClick"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521" />
 
     <Button
         android:id="@+id/and_lib_crash"
-        android:layout_width="328dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="176dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
         android:text="Create crash in Android library"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/and_lib_crash2"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/java_lib_crash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
         android:layout_marginBottom="8dp"
         android:text="Create crash in java library"
         app:layout_constraintBottom_toTopOf="@+id/and_lib_crash"
-        tools:layout_editor_absoluteX="73dp" />
+        app:layout_constraintStart_toStartOf="@+id/and_lib_crash" />
+
+    <Button
+        android:id="@+id/real_life_crash_scenario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Real life crash scenarios"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

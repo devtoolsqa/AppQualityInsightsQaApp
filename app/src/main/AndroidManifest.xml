@@ -13,6 +13,17 @@
         android:theme="@style/Theme.AppQualityInsightsQaApp"
         tools:targetApi="31">
         <activity
+            android:name=".realcrash.IllegalFormatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".realcrash.RealCrashScenariosMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".realcrash.CrashNoActionBarActivity"
+            android:exported="true"
+            android:label="CrashNoActionBarActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

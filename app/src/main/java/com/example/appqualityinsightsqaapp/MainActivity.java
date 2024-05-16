@@ -3,11 +3,10 @@ package com.example.appqualityinsightsqaapp;
 import static com.example.lib.JavaLibraryClass.createCrashInJavaLibrary;
 import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibrary;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.lib.JavaLibraryClass;
-import com.example.lib.TestClass;
-import com.example.mylibrary.AndroidLibraryClass;
+import com.example.appqualityinsightsqaapp.realcrash.RealCrashScenariosMainActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button andLibButton;
     Button andLibButton2;
     Button javalibCrash;
+    Button realLifeCrashScenario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         andLibButton=findViewById(R.id.and_lib_crash);
         andLibButton2=findViewById(R.id.and_lib_crash2);
         javalibCrash=findViewById(R.id.java_lib_crash);
+        realLifeCrashScenario = findViewById(R.id.real_life_crash_scenario);
+
         andLibButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,6 +100,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 createCrashInJavaLibrary();
             }
+        });
+        realLifeCrashScenario.setOnClickListener(v -> {
+            startActivity(new Intent(this, RealCrashScenariosMainActivity.class));
         });
     }
 
@@ -125,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void performClick(View view) {
-        String s=null;
-        int length=s.length();
+        String s = null;
+        int length = s.length();
     }
 }
