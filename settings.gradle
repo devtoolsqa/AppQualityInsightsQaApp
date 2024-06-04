@@ -3,8 +3,6 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-        maven {url "/Users/suyoglokhande/.android/manual-offline-m2/gmaven_repo"}
-
     }
 }
 dependencyResolutionManagement {
@@ -12,8 +10,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven {url "/Users/suyoglokhande/.android/manual-offline-m2/gmaven_repo"}
-
     }
 }
 rootProject.name = "AppQualityInsightsQaApp"
