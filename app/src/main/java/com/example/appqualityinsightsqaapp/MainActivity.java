@@ -5,26 +5,22 @@ import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibr
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.example.appqualityinsightsqaapp.realcrash.RealCrashScenariosMainActivity;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.View;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.appqualityinsightsqaapp.databinding.ActivityMainBinding;
+import com.example.appqualityinsightsqaapp.realcrash.RealCrashScenariosMainActivity;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.crashlytics.CustomKeysAndValues;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Button;
 
 import java.util.Locale;
 
@@ -65,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Replace with your own action: Checking commit", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 throw new RuntimeException("Test Crash vcs");
             }
