@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AppInsightsSettings">
-    <option name="selectedTabId" value="Android Vitals" />
+    <option name="selectedTabId" value="Firebase Crashlytics" />
     <option name="tabSettings">
       <map>
         <entry key="Android Vitals">
@@ -28,6 +28,24 @@
                   <option name="projectId" value="appqualityrelease" />
                   <option name="projectNumber" value="72165087615" />
                 </ConnectionSetting>
+              </option>
+              <option name="devices">
+                <list>
+                  <DeviceSetting>
+                    <option name="deviceType" value="Phone" />
+                    <option name="displayName" value="Google (Pixel 9 Pro)" />
+                    <option name="manufacturer" value="Google" />
+                    <option name="model" value="Pixel 9 Pro" />
+                  </DeviceSetting>
+                </list>
+              </option>
+              <option name="operatingSystems">
+                <list>
+                  <OperatingSystemSetting>
+                    <option name="displayName" value="Android (15)" />
+                    <option name="displayVersion" value="15" />
+                  </OperatingSystemSetting>
+                </list>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
               <option name="timeIntervalDays" value="NINETY_DAYS" />
