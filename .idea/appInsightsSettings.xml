@@ -29,24 +29,6 @@
                   <option name="projectNumber" value="72165087615" />
                 </ConnectionSetting>
               </option>
-              <option name="devices">
-                <list>
-                  <DeviceSetting>
-                    <option name="deviceType" value="Phone" />
-                    <option name="displayName" value="Google (Pixel 9 Pro)" />
-                    <option name="manufacturer" value="Google" />
-                    <option name="model" value="Pixel 9 Pro" />
-                  </DeviceSetting>
-                </list>
-              </option>
-              <option name="operatingSystems">
-                <list>
-                  <OperatingSystemSetting>
-                    <option name="displayName" value="Android (15)" />
-                    <option name="displayVersion" value="15" />
-                  </OperatingSystemSetting>
-                </list>
-              </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
               <option name="timeIntervalDays" value="NINETY_DAYS" />
               <option name="visibilityType" value="ALL" />

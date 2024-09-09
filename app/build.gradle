@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId "com.quality.appqualityinsightsqaapp"
-        minSdk 24
+        minSdk 27
         targetSdk 34
         versionCode 6
         versionName "6.0"
@@ -39,8 +39,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     buildFeatures {
         viewBinding true
