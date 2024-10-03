@@ -2,6 +2,7 @@ package com.example.appqualityinsightsqaapp;
 
 import static com.example.lib.JavaLibraryClass.createCrashInJavaLibrary;
 import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibrary;
+import static com.google.play.dynamic.filters.opted.shared.Platform_androidKt.createCrashInKMPModule;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     Button andLibButton2;
     Button javalibCrash;
     Button realLifeCrashScenario;
+    Button kmpCrash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,12 +69,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                throw new RuntimeException("Test Crash vcs");
+               throw new RuntimeException("Test Crash vcs");
+
             }
         });
         andLibButton=findViewById(R.id.and_lib_crash);
         andLibButton2=findViewById(R.id.and_lib_crash2);
         javalibCrash=findViewById(R.id.java_lib_crash);
+        kmpCrash=findViewById(R.id.kmp_crash);
         realLifeCrashScenario = findViewById(R.id.real_life_crash_scenario);
 
         andLibButton.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +107,9 @@ public class MainActivity extends AppCompatActivity {
         });
         realLifeCrashScenario.setOnClickListener(v -> {
             startActivity(new Intent(this, RealCrashScenariosMainActivity.class));
+        });
+        kmpCrash.setOnClickListener(v -> {
+            createCrashInKMPModule();
         });
     }
 

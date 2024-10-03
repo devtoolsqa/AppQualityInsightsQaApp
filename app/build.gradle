@@ -18,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId "com.quality.appqualityinsightsqaapp"
-        minSdk 24
+        minSdk 27
         targetSdk 34
         versionCode 6
         versionName "6.0"
@@ -61,4 +61,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation(project(":shared"))
 }
