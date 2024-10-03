@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
-    Button andLibButton;
+    Button androidLibCrashButton;
     Button andLibButton2;
     Button javalibCrash;
     Button realLifeCrashScenario;
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         String deviceLocale = Locale.getDefault().getDisplayLanguage();
         String country = Locale.getDefault().getCountry();
         String deviceName = android.os.Build.MANUFACTURER + "-" + android.os.Build.MODEL+ "-" + android.os.Build.PRODUCT;
-
+// androidLibCrashButton
         CustomKeysAndValues keysAndValues = new CustomKeysAndValues.Builder()
                 .putString("fragment", "Main Activity")
                 .putString("device_name", deviceName)
@@ -64,15 +64,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action: Checking commit", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                throw new RuntimeException("Test Crash VCS 1");
+
+
+                throw new RuntimeException(getString(R.string.androidLibCrashButton));
             }
         });
-        andLibButton=findViewById(R.id.and_lib_crash);
+        androidLibCrashButton = findViewById(R.id.androidLibCrashButton);
         andLibButton2=findViewById(R.id.and_lib_crash2);
         javalibCrash=findViewById(R.id.java_lib_crash);
         realLifeCrashScenario = findViewById(R.id.real_life_crash_scenario);
 
-        andLibButton.setOnClickListener(new View.OnClickListener() {
+        androidLibCrashButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 createCrashInAndroidLibrary();

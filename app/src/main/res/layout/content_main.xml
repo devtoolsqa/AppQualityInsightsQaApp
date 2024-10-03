@@ -42,11 +42,11 @@
         app:layout_constraintVertical_bias="0.521" />
 
     <Button
-        android:id="@+id/and_lib_crash"
+        android:id="@+id/androidLibCrashButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
-        android:text="Create crash in Android library"
+        android:text="@string/androidLibCrashButton"
         app:layout_constraintBottom_toTopOf="@+id/and_lib_crash2"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -57,8 +57,8 @@
         android:layout_marginStart="9dp"
         android:layout_marginBottom="8dp"
         android:text="Create crash in java library"
-        app:layout_constraintBottom_toTopOf="@+id/and_lib_crash"
-        app:layout_constraintStart_toStartOf="@+id/and_lib_crash" />
+        app:layout_constraintBottom_toTopOf="@+id/androidLibCrashButton"
+        app:layout_constraintStart_toStartOf="@+id/androidLibCrashButton" />
 
     <Button
         android:id="@+id/real_life_crash_scenario"
