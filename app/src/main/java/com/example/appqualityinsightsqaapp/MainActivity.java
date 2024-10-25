@@ -5,10 +5,12 @@ import static com.example.mylibrary.AndroidLibraryClass.createCrashInAndroidLibr
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +26,12 @@ import com.google.firebase.crashlytics.CustomKeysAndValues;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseCrashlytics.getInstance().log("App launched in: " + country + " with device locale as: " + deviceLocale);
         super.onCreate(savedInstanceState);
 
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -65,14 +74,16 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action: Checking commit", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
 
+                callCountryAPI();
 
-                throw new RuntimeException(getString(R.string.androidLibCrashButton));
+//                throw new RuntimeException(getString(R.string.androidLibCrashButton));
             }
         });
         androidLibCrashButton = findViewById(R.id.androidLibCrashButton);
         andLibButton2=findViewById(R.id.and_lib_crash2);
         javalibCrash=findViewById(R.id.java_lib_crash);
         realLifeCrashScenario = findViewById(R.id.real_life_crash_scenario);
+
 
         androidLibCrashButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,6 +113,48 @@ public class MainActivity extends AppCompatActivity {
         });
         realLifeCrashScenario.setOnClickListener(v -> {
             startActivity(new Intent(this, RealCrashScenariosMainActivity.class));
+        });
+    }
+
+    private void callCountryAPI() {
+// on below line we are creating a retrofit
+        // builder and passing our base url
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://api.petnav.com/")
+                // as we are sending data in json format so
+                // we have to add Gson converter factory
+                .addConverterFactory(GsonConverterFactory.create())
+                // at last we are building our retrofit builder.
+                .build();
+        // below line is to create an instance for our retrofit api class.
+        RetrofitAPI retrofitAPI = retrofit.create(RetrofitAPI.class);
+
+        // passing data from our text fields to our modal class.
+        DataModal modal = new DataModal(0, "job");
+
+        // calling a method to create a post and passing our modal class.
+        Call<DataModal> call = retrofitAPI.createPost();
+
+        // on below line we are executing our method.
+        call.enqueue(new Callback<DataModal>() {
+            @Override
+            public void onResponse(Call<DataModal> call, Response<DataModal> response) {
+                Log.d("TAG", response.toString());
+                // this method is called when we get response from our api.
+                Toast.makeText(MainActivity.this, "Data added to API", Toast.LENGTH_SHORT).show();
+                // we are getting response from our body
+                // and passing it to our modal class.
+                DataModal responseFromAPI = response.body();
+
+                // on below line we are getting our data from modal class and adding it to our string.
+            }
+
+            @Override
+            public void onFailure(Call<DataModal> call, Throwable t) {
+                Log.d("TAG", t.toString());
+                // setting text to our text view when
+                // we get error response from API.
+            }
         });
     }
 

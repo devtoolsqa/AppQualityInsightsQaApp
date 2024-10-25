@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AppInsightsSettings">
-    <option name="selectedTabId" value="Firebase Crashlytics" />
+    <option name="selectedTabId" value="Android Vitals" />
     <option name="tabSettings">
       <map>
         <entry key="Android Vitals">
@@ -23,8 +23,8 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.quality.appqualityinsightsqaapp" />
-                  <option name="mobileSdkAppId" value="1:72165087615:android:a4455dc825801aca45224a" />
+                  <option name="appId" value="com.example.flavorsmodule.com.example.flavorsmodule.flv1" />
+                  <option name="mobileSdkAppId" value="1:72165087615:android:64d6d706bea8744945224a" />
                   <option name="projectId" value="appqualityrelease" />
                   <option name="projectNumber" value="72165087615" />
                 </ConnectionSetting>
